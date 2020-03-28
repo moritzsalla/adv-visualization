@@ -4,7 +4,7 @@ import numpy as np
 from bs4 import BeautifulSoup
 import urllib.request
 
-URL = "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic"
+URL = "https://en.wikipedia.org/wiki/Coronavirus"
 WORD_COUNT = 100
 
 print("————————————————————————————————————————————————")
