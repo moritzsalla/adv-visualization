@@ -1,0 +1,6 @@
+    -	Have a look at the following demos:
+    -	https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras
+    -	https://research.google.com/seedbank/seed/deepdream
+    -	Use your own images to create your own style transfer and deep dream outputs.
+    -	Check out some of the other examples: https://colab.research.google.com/notebooks/intro.ipynb#scrollTo=P-H6Lw1vyNNd
+    -	If you are feeling like a challenge, get the code running on your own machine.
