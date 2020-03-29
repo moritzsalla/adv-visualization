@@ -1,2 +1,9 @@
 
 .DS_Store
+.ycm_extra_conf.py
+*.o
+*.a
+*.swp
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
