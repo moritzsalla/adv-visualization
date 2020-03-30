@@ -14,9 +14,8 @@ WORD_COUNT = int(WORD_COUNT)
 
 print(hr)
 
-print(f"SUMMARIZING {URL} INTO {WORD_COUNT} WORDS")
-
-print(hr)
+#print(f"SUMMARIZING {URL} INTO {WORD_COUNT} WORDS")
+#print(hr)
 
 # Scrape Websites
 
