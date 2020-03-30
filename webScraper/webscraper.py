@@ -4,17 +4,19 @@ import numpy as np
 from bs4 import BeautifulSoup
 import urllib.request
 
-print("————————————————————————————————————————————————")
+hr = "—" * 80
+
+print(hr)
 
 URL = input("URL: ")
-WORD_COUNT = input("Word Count: ")
+WORD_COUNT = input("WORD COUNT: ")
 WORD_COUNT = int(WORD_COUNT)
 
-print("————————————————————————————————————————————————")
+print(hr)
 
 print(f"SUMMARIZING {URL} INTO {WORD_COUNT} WORDS")
 
-print("————————————————————————————————————————————————")
+print(hr)
 
 # Scrape Websites
 
@@ -32,3 +34,5 @@ for text in URL.find_all("p"):
 collection = summarize(collection, word_count=WORD_COUNT)
 
 print(collection)
+
+print(hr)
