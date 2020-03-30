@@ -4,7 +4,7 @@
 - If you manage to achieve this, extract keywords from all the different documents and see if any are more popular than others.
 - Search for documents that contain those keywords using Python and then summarise those documents too.
 
-### Installation
+### Basic Version
 
 To install all dependencies, cd into the downloaded folder and run this terminal command.
 
@@ -22,4 +22,14 @@ The program will prompt you with two fields that you have to fill out, the URL a
 
 ![Screenshot](./screenshot.jpg)
 
+### Extended Version
+
+This program will extracts keywords from several websites, 
+
+```
+python3 webscraper-ext.py
+```
+
 ### Summary
+
+I've kept the simple website summarizer because I think its so useful! I've even turned it into a terminal command that I can use whenever I need it. 
