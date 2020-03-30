@@ -38,8 +38,6 @@ python3 webscraper-ext.py
 
 ![Screenshot](./screenshot4.jpg)
 
-![Screenshot](./screenshot5.jpg)
-
 ### Summary
 
 I've kept the simple website summarizer because I think its so useful! I've even turned it into a terminal command that I can use whenever I need it. 
