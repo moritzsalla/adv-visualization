@@ -7,11 +7,11 @@
 - Submit your image outputs. If you make any changes to the code, submit your own version of the notebooks, highlighting the changes you made using comments.
 - You should also try to get the code running on your own machine. If you do this, submit the code that runs on your own device.
 
-### Deep Dream
+## Deep Dream
 
-### Style Transfer
+## Style Transfer
 
-#### Aerial Pics
+### Aerial Pics
 
 Images I took from the plane
 
@@ -28,7 +28,7 @@ Set iterations to 5000
 ![Export](aerial-pics/exports/export-3.jpg)
 ![Export](aerial-pics/exports/export-4.jpg)
 
-#### Fighterplane
+### Fighterplane
 
 ![Export](fighterplane/exports/export-1.jpg)
 ![Export](fighterplane/exports/export-2.jpg)
