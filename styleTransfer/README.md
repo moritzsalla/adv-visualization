@@ -27,7 +27,6 @@ Set iterations to 5000
 ![Export](aerial-pics/exports/export-2.jpg)
 ![Export](aerial-pics/exports/export-3.jpg)
 ![Export](aerial-pics/exports/export-4.jpg)
-![Export](aerial-pics/exports/export-5.jpg)
 
 #### Fighterplane
 
