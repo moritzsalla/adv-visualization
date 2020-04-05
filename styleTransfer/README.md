@@ -9,6 +9,13 @@
 
 ## Deep Dream
 
+![Export](deepdream/exports/deepdream-export-1.jpeg)
+![Export](deepdream/exports/deepdream-export-2.jpeg)
+![Export](deepdream/exports/deepdream-export-3.jpeg)
+![Export](deepdream/exports/deepdream-export-4.jpeg)
+![Export](deepdream/exports/deepdream-export-5.jpeg)
+![Export](deepdream/exports/deepdream-export-6.jpeg)
+
 ## Style Transfer
 
 ### Aerial Pics
