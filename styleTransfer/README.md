@@ -14,7 +14,6 @@
 ![Export](deepdream/exports/export-3.jpeg)
 ![Export](deepdream/exports/export-4.jpeg)
 ![Export](deepdream/exports/export-5.jpeg)
-![Export](deepdream/exports/export-6.jpeg)
 
 ## Style Transfer
 
