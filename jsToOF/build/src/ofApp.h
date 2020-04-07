@@ -30,4 +30,6 @@ class ofApp : public ofBaseApp{
     int i = 0; // iterator for for-loop
     int dirCount; // number of directories containing shaders
     
+    ofxPlotter plotter;
+
 };
