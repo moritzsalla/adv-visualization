@@ -10,9 +10,9 @@ To set up the development environment on mac, make sure to have downloaded the O
 
 ## Log
 
-I used this as part of our tate exhibition, displaying the class's shaders. For this, I created a loop that iterates every x frames. Josh later added his vertex shaders, as well as shaders that made use of the webcam. Since most of our class shaders weren't interactive, I decided to add a fps HUD using `ofxPlotter`. This graphs the fps count, emphasizing that shaders weren't prerecorded and in–fact real time. Unfortunately, setting the plugins ceiling and floor values didn't work, which adjusted the fps axis to 23 and 24, creating more of a zigzag artwork than anything else. The developer didn't react to the Github issue I opened.
+I used this as part of our Tate exhibition, displaying the class's shaders. For this, I created a loop that iterates every x frames. Josh later added his vertex shaders, as well as shaders that made use of the webcam. Since most of our class shaders weren't interactive, I decided to add an fps HUD using `ofxPlotter`. The plotter graphs the fps count, emphasizing that shaders weren't prerecorded and in–fact real-time. Unfortunately, setting the plugins ceiling and floor values didn't work, which adjusted the fps axis to 23 and 24, creating more of a zigzag artwork than anything else. There's also no way to influence the thickness of the plotter's lines, making the graph hardly visible. The developer didn't react to the Github issue I opened.
 
-This version is a simplified version, only showcasing my own fragment shaders. Therefore, I've removed the webcam and vertex code blocks. 
+This version is a simplified version, only showcasing my fragment shaders. Therefore, I've removed the webcam and vertex code blocks. 
 
 ![Screenshot](screenshot.jpg)
 ![Screenshot](screenshot2.jpg)
