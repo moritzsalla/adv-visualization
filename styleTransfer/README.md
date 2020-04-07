@@ -9,11 +9,11 @@
 
 ## Deep Dream
 
-![Export](deepdream/exports/export-1.jpeg)
-![Export](deepdream/exports/export-2.jpeg)
-![Export](deepdream/exports/export-3.jpeg)
-![Export](deepdream/exports/export-4.jpeg)
-![Export](deepdream/exports/export-5.jpeg)
+![Export](deepdream/export-1.jpeg)
+![Export](deepdream/export-2.jpeg)
+![Export](deepdream/export-3.jpeg)
+![Export](deepdream/export-4.jpeg)
+![Export](deepdream/export-5.jpeg)
 
 ## Style Transfer
 
@@ -21,10 +21,10 @@
 
 I'm intrigued by fighter planes, which shows to prove that I'm still a little boy, really. Joel Gethin Lewis seems to share the same fascination, as his instagram (https://www.instagram.com/jgl/) is littered with experimental fighter aircraft up until January of 2018. Inspired, I collected images of said, stuck them into the seedbank algorithm, and out came experimental fighterplane style transfers. I figured that it's very easy to run into copyright issues when assembling ones own database using images from google.
 
-![Export](fighterplane/exports/export-1.jpg)
-![Export](fighterplane/exports/export-2.jpg)
-![Export](fighterplane/exports/export-3.jpg)
-![Export](fighterplane/exports/export-4.jpg)
+![Export](fighterplane/export-1.jpg)
+![Export](fighterplane/export-2.jpg)
+![Export](fighterplane/export-3.jpg)
+![Export](fighterplane/export-4.jpg)
 
 ### Aerial Pics
 
