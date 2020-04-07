@@ -14,8 +14,8 @@ I used this as part of our tate exhibition, displaying the class's shaders. For 
 
 This version is a simplified version, only showcasing my own fragment shaders. Therefore, I've removed the webcam and vertex code blocks. 
 
-![Screenshot](screenshot.png)
-![Screenshot](screenshot2.png)
-![Screenshot](screenshot3.png)
+![Screenshot](screenshot.jpg)
+![Screenshot](screenshot2.jpg)
+![Screenshot](screenshot3.jpg)
 
 Tip: Unlike processing's `pixelDensity()` function, OF doesn't create a retina capable window by default. Setting `High Resolution Capable` to `YES` in `openFrameworks-Info.plist` enables retina support – took me years to find out. Very handy.
