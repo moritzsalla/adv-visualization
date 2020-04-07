@@ -7,6 +7,10 @@
 - Submit your image outputs. If you make any changes to the code, submit your own version of the notebooks, highlighting the changes you made using comments.
 - You should also try to get the code running on your own machine. If you do this, submit the code that runs on your own device.
 
+## Setup
+
+All python notebooks are located within their respective folders. I use Google Colab to run them, which takes care of installing all the dependencies for me. In order to run them locally, the dependencies within the first code block have to be installed, preferaly within an environment such as conda, a virtual environment, or docker. 
+
 ## Deep Dream
 
 ![Export](deepdream/export-1.jpeg)
