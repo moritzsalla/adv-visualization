@@ -15,6 +15,8 @@ pipenv run jupyter notebook ./path-to/file.ipynb
 
 *`pipenv` and `jupyter notebook` are compatible through installing `jupyter`. Read more about it [here](https://stackoverflow.com/questions/47295871/is-there-a-way-to-use-pipenv-with-jupyter-notebook).
 
+### Issues with tensorflow
+
 For the reasons listed [in this issue](https://github.com/pypa/pipenv/issues/2619), pipenv won't properly install tensorflow. This is the workaround I took:
 
 ```
