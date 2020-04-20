@@ -13,7 +13,7 @@ All python notebooks are located within their respective folders. I use Google C
 
 ## Deep Dream
 
-The Seedbank example is basically plug and play when used with Colab – no changes needed to get running. As with some other examples, I used colabs handy feature to connect to my Google Drive, which enables me to save to it directly. I can also pull in my dataset from my drive:
+This has been a little bit of a primer for my final project. The Seedbank example is basically plug and play when used with Colab – no changes needed to get running. As with some other examples, I used colabs handy feature to connect to my Google Drive, which enables me to save to it directly. I can also pull in my dataset from my drive:
 
 ```python
   from google.colab import drive
