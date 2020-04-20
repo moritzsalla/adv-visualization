@@ -1,5 +1,7 @@
 # Using TensorFlow to Create Outputs
 
+**Apart from setting up logistics in Colab, I did not adapt the model itself.**
+
 ## Installation
 
 All python notebooks are located within their respective folders. I use Google Colab to run them because its faster and it takes care of installing all the dependencies for me. For the sake of this lab, I have created a pip file that lets you install the dependencies by running `pipenv install`. Here's a [link](https://stackoverflow.com/questions/47295871/is-there-a-way-to-use-pipenv-with-jupyter-notebook) to how to make pipenv compatible with jupyter notebook. The script can be executed by running `pipenv run jupyter notebook ./route-to-file.ipynb`.
@@ -14,8 +16,6 @@ This has been a little bit of a primer for my final project. The Seedbank exampl
 from google.colab import drive
 drive.mount('/content/drive')
 ```
-
-Apart from setting up logistics in Colab, I did not adapt the code itself. 
 
 ![Export](deepdream/export-1.jpeg)
 ![Export](deepdream/export-2.jpeg)
