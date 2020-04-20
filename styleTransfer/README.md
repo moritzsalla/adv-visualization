@@ -4,11 +4,11 @@
 
 ## Installation
 
-All python notebooks are located within their respective folders. I use Google Colab to run them because its faster and it takes care of installing all the dependencies for me. For the sake of this lab, I have created a pip file that lets you install the dependencies by running `pipenv install`. Here's a [link](https://stackoverflow.com/questions/47295871/is-there-a-way-to-use-pipenv-with-jupyter-notebook) to how to make pipenv compatible with jupyter notebook. The script can be executed by running `pipenv run jupyter notebook ./route-to-file.ipynb`.
+All python notebooks are located within their respective folders. I use Google Colab to run them because its faster and it takes care of installing all the dependencies for me. For the sake of this lab, I have created a pip file that lets you install the dependencies by running `pipenv install`. Here's a [link](https://stackoverflow.com/questions/47295871/is-there-a-way-to-use-pipenv-with-jupyter-notebook) to how to make pipenv compatible with jupyter notebook. The script can be executed by running `pipenv run jupyter notebook ./route-to-file.ipynb`. I haven't run all the models locally, hence there might be small implementation errors (such as magic lines or connecting to drive) if you chose to do so. Data folders might be renamed but these things should be a quick fix.
 
 ## Deep Dream
 
-Source: https://research.google.com/seedbank/seed/deepdream
+**Source: https://research.google.com/seedbank/seed/deepdream**
 
 This has been a little bit of a primer for my final project. The Seedbank example is basically plug and play when used with Colab – no changes needed to get running. As with some other examples, I used colabs handy feature to connect to my Google Drive, which enables me to save to it directly. I can also pull in my dataset from my drive:
 
@@ -25,7 +25,7 @@ drive.mount('/content/drive')
 
 ## Style Transfer
 
-Source: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras
+**Source: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras**
 
 ### Fighterplane
 
