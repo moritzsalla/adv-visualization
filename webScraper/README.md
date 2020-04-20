@@ -1,6 +1,8 @@
-# Week 4 Exercise - Python webscrapers
+# Python Webscrapers
 
-## Basic Version
+## Installation
+
+### Basic Version
 
 I've kept the simple website summarizer because I think its so useful! I've even turned it into a terminal command that I can use whenever I need it. 
 
@@ -20,7 +22,7 @@ The program will prompt you with two fields that you have to fill out, the URL a
 
 ![Screenshot](./screenshot1.jpg)
 
-## Extended Version
+### Extended Version
 
 This program extracts keywords from a site and ranks them in popularity. The three most common keywords are then used as queries to search for new sites. These, in return, will be summarized. Unlike the first version, the URL is statically set in the code.
 
