@@ -1,10 +1,6 @@
 # Week 4 Exercise - Python webscrapers
 
-- Build a simple webscraper that scrapes a set of documents from the internet and summarises them using gensim.
-- If you manage to achieve this, extract keywords from all the different documents and see if any are more popular than others.
-- Search for documents that contain those keywords using Python and then summarise those documents too.
-
-### Basic Version
+## Basic Version
 
 I've kept the simple website summarizer because I think its so useful! I've even turned it into a terminal command that I can use whenever I need it. 
 
@@ -24,20 +20,20 @@ The program will prompt you with two fields that you have to fill out, the URL a
 
 ![Screenshot](./screenshot1.jpg)
 
-### Extended Version
+## Extended Version
 
 This program extracts keywords from a site and ranks them in popularity. The three most common keywords are then used as queries to search for new sites. These, in return, will be summarized. Unlike the first version, the URL is statically set in the code.
 
 If you haven't already, install the dependencies like so:
 
 ```
-$ pipenv install
+pipenv install
 ```
 
 Then run:
 
 ```
-$ pipenv run python3 webscraper-ext.py
+pipenv run python3 webscraper-ext.py
 ```
 
 ![Screenshot](./screenshot2.jpg)
@@ -46,7 +42,7 @@ $ pipenv run python3 webscraper-ext.py
 
 ![Screenshot](./screenshot4.jpg)
 
-### Summary
+## Summary
 
 Setting up my python environment is a nightmare. Conda won't install some dependencies, global pip packages to the rescue. I don't know what's local and what's global since there's no package file anywhere. I've looked into Docker, and it looks neat but for another day when I have more time at hand. I'm specifically struggling with python's requirements.txt file. I understand that `pip freeze` will copy the dependencies of your environment into a requirments.txt file. These seem to include many more sub-dependencies, as they are more than what I have installed. I have added a dependency manually because I couldn't be bothered to set up an environment. I hope this doesn't create errors for other users when installing the file.
 
