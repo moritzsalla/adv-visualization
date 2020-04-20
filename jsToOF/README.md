@@ -1,8 +1,6 @@
- # Week 2 Exercise - Your first OF project
- 
- - Select a JavaScript project you completed last term and port it to C++ using openFrameworks
+# Your First OF Project
 
-## Setup
+## Installation
 
 There is a build in the `build/bin/` directory. To run the app, simply double click on the icon.
 
@@ -17,5 +15,7 @@ This version is a simplified version, only showcasing my fragment shaders. There
 Note to self: Unlike processing's `pixelDensity()` function, OF doesn't create a retina capable window by default. Setting `High Resolution Capable` to `YES` in `openFrameworks-Info.plist` enables retina support – took me years to find out. Very handy.
 
 ![Screenshot](screenshot.jpg)
+
 ![Screenshot](screenshot2.jpg)
+
 ![Screenshot](screenshot3.jpg)

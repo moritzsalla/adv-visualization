@@ -1,24 +1,21 @@
-# Week 7 Exercise - Using TensorFlow to create outputs
+# Using TensorFlow to Create Outputs
 
-- Have a look at the following demos:
-- https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras
-- https://research.google.com/seedbank/seed/deepdream
-- Use your own images to create your own style transfer and deep dream outputs.
-- Submit your image outputs. If you make any changes to the code, submit your own version of the notebooks, highlighting the changes you made using comments.
-- You should also try to get the code running on your own machine. If you do this, submit the code that runs on your own device.
+## Installation
 
-## Setup
-
-All python notebooks are located within their respective folders. I use Google Colab to run them, which takes care of installing all the dependencies for me. In order to run them locally, the dependencies within the first code block have to be installed, preferaly within an environment such as conda, a virtual environment, or docker. 
+All python notebooks are located within their respective folders. I use Google Colab to run them because its faster and it takes care of installing all the dependencies for me. For the sake of this lab, I have created a pip file that lets you install the dependencies by running `pipenv install`. Here's a [link](https://stackoverflow.com/questions/47295871/is-there-a-way-to-use-pipenv-with-jupyter-notebook) to how to make pipenv compatible with jupyter notebook. The script can be executed by running `pipenv run jupyter notebook ./route-to-file.ipynb`.
 
 ## Deep Dream
+
+Source: https://research.google.com/seedbank/seed/deepdream
 
 This has been a little bit of a primer for my final project. The Seedbank example is basically plug and play when used with Colab – no changes needed to get running. As with some other examples, I used colabs handy feature to connect to my Google Drive, which enables me to save to it directly. I can also pull in my dataset from my drive:
 
 ```python
-  from google.colab import drive
-  drive.mount('/content/drive')
+from google.colab import drive
+drive.mount('/content/drive')
 ```
+
+Apart from setting up logistics in Colab, I did not adapt the code itself. 
 
 ![Export](deepdream/export-1.jpeg)
 ![Export](deepdream/export-2.jpeg)
@@ -27,6 +24,8 @@ This has been a little bit of a primer for my final project. The Seedbank exampl
 ![Export](deepdream/export-5.jpeg)
 
 ## Style Transfer
+
+Source: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras
 
 ### Fighterplane
 
