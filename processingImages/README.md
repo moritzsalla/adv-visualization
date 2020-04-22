@@ -28,5 +28,4 @@ Edit: not even this fixed it. Since I originally ran this on colab anyways, I wo
 
 ## Description
 
-- Find the possibilties intresenting, merely numpy and matplotlib gives interesting results
-- Little hard to replicated
+Manipulating images with nothing more than matplotlib and numpy is hugely satisfying. I'm amazed that this can be done by such simple tools. Although I'm still a little fuzzy on the syntax that is used to select certain color channels (like so `img[:, :, 2]`), I find matplotlibs functions pretty straightforward. I wonder how image filters such as gaussian blur could be properly implemented this way without further requirements. Here's a stack overflow post that achieves this, albeit using `scipy`, an additional dependency.
