@@ -1,4 +1,3 @@
-
 Each assignment is located in its respective folder, alongside a readme containing an explanation and setup instructions.
 
 ### [Your first OF project](https://github.com/moritzsalla/micklabs/tree/master/jsToOF)
