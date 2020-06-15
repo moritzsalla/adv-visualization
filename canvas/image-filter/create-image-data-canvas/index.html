@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <!-- The Canvas tag sets up a screen in the browser that we can draw to. -->
+  <canvas></canvas>
+
+  <script type="text/javascript">
+    // This is where we are going to store the mouse information
+    var mouseX;
+    var mouseY;
+
+    // This gets a reference to the canvas in the browser
+    var canvas = document.querySelector("canvas");
+    // All your drawing will be done in this canvas
+    // This creates a 2d drawing 'context' in your canvas
+    var context = canvas.getContext("2d");
+    //This tells the browser to get the mouse information from the function we've called getMouse
+    canvas.addEventListener('mousemove', getMouse, false);
+
+    // This sets the width and height to the document window
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    // Be aware that when you resize the window, you will need to call (do) this again
+
+    //Create a new object called imageData that we can use to create some Image data
+    var imageData = context.createImageData(canvas.width, canvas.height);
+
+
+    function draw() {
+
+      var position = 0;
+
+      //cos(n * pi * x / L) * cos(m * pi * y / L) - cos(m * pi * x / L) * cos(n * pi * y / L)
+
+      for (var y = 0; y < imageData.height; y++) {
+        for (var x = 0; x < imageData.width; x++) {
+
+          var x1 = mouseX / 2;
+          var y1 = 1000;
+          var L = 100000; // this is for scaling
+          // very simple expression to generate a pattern
+          var t = Math.cos(x * Math.PI * x1 / L) * Math.cos(y * Math.PI * y1 / L) - Math.sin(y * Math.PI * x1 / L) / Math.sin(x * Math.PI * y1 / L) / Math.sin(y * Math.PI * y1 / L)
+          // the output is between 0-2. We are going to scale it
+          // It needs to be between 0-255
+          var c = t * 850;
+
+          // set red, green, blue, and alpha:
+          position = (x + y * imageData.width) * 4;
+          imageData.data[position] = c % 0;
+          imageData.data[position + 1] = c % 255;
+          imageData.data[position + 2] = (2 * c) % 120;
+          imageData.data[position + 3] = 255; // opaque alpha
+        }
+        //	console.log(position);
+      }
+
+      context.putImageData(imageData, 0, 0); // at coords 0,0
+
+      requestAnimationFrame(draw);
+
+    }
+
+    //finally ask for a frame.
+    requestAnimationFrame(draw);
+    //the end.
+
+    //here's our function 'getMouse'.
+    function getMouse(mousePosition) {
+
+      if (mousePosition.layerX || mousePosition.layerX === 0) {
+        mouseX = mousePosition.layerX;
+        mouseY = mousePosition.layerY;
+      } else if (mousePosition.offsetX || mousePosition.offsetX === 0) {
+        mouseX = mousePosition.offsetX;
+        mouseY = mousePosition.offsetY;
+      }
+    }
+  </script>
+
+</body>
+
+</html>

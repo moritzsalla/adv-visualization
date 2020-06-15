@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <script src="https://mimicproject.com/libs/maximilian.js"></script>
+
+</head>
+
+<body>
+  <canvas style="background-color: blue;"></canvas>
+
+  <!-- Our javascript code -->
+  <script type="text/javascript">
+    var drawOutput = new Array(1024);
+    var counter = 0;
+    var maximJs = maximilian();
+    var audio = new maximJs.maxiAudio();
+    var myOsc = new maximJs.maxiOsc();
+    var myOsc2 = new maximJs.maxiOsc();
+    audio.init();
+
+    audio.play = function() {
+
+      counter++;
+      // to perceptually freeze the signal we divide the sampling rate by the buffer size and
+      // use this as frequency
+      var sum = myOsc.square(42.965 * 10);
+      // but this only works if the refresh rate is reliable
+      // which depends on your browser
+      var out = sum * 3;
+
+      drawOutput[counter % 1024] = out;
+      return out;
+    };
+
+
+
+    var canvas = document.querySelector("canvas");
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var context = canvas.getContext("2d");
+
+    canvas.setAttribute("width", width);
+    canvas.setAttribute("height", height);
+
+    var spacing = (width / 1024);
+
+    function draw() {
+
+      //This is basically the same as any other 2D processing draw routine.
+
+      //clear the screen
+      context.clearRect(0, 0, width, height);
+      //draw a square
+
+
+      for (var i = 0; i < 1024; i++) {
+        context.beginPath();
+        context.moveTo(i * spacing * 2, height / 2);
+        context.lineTo(i * spacing * 0.1, height / 2 + (drawOutput[i] * height / 4));
+        context.stroke();
+        context.closePath();
+      }
+    }
+
+    setInterval(draw, 20);
+  </script>
+
+</body>
+
+</html>

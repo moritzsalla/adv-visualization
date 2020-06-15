@@ -1,0 +1,94 @@
+<html>
+
+<head>
+  <script src="https://mimicproject.com/libs/maximilian.js"></script>
+
+</head>
+
+<body>
+  <canvas style="background: rgba(147,206,222,1);
+background: -moz-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(17,41,48,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(17,41,48,1)));
+background: -webkit-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(17,41,48,1) 100%);
+background: -o-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(17,41,48,1) 100%);
+background: -ms-linear-gradient(top, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(17,41,48,1) 100%);
+background: linear-gradient(to bottom, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(17,41,48,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#112930', GradientType=0 );"></canvas>
+
+</body>
+<script type="text/javascript">
+  var changeThis = 1;
+  var maximJs = maximilian();
+  var maxiAudio = new maximJs.maxiAudio();
+
+  maxiAudio.init();
+
+
+  var osc = new maximJs.maxiOsc();
+  var osc2 = new maximJs.maxiOsc();
+  var osc3 = new maximJs.maxiOsc();
+  var samp = new maximJs.maxiSample();
+  var output;
+  var drawOutput = new Array(512);
+  var counter = 0;
+
+  var canvas = document.querySelector("canvas");
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var context = canvas.getContext("2d");
+  canvas.setAttribute("width", width);
+  canvas.setAttribute("height", height);
+
+  var spacing = ((Math.PI * 2) / 512);
+  var size = width / 12;
+
+  var bufferFreq = 44100 / 512;
+  // maximJs.maxiTools.loadSample("1085.mp3", samp);
+
+
+  maxiAudio.play = function() {
+    // create wave for fft
+    var wave = (osc.coswave(86) - osc2.square(Math.floor(Math.random(122))) + osc3.sinewave(0.1));
+
+
+    //               var wave = samp.play();
+    //var wave = osc.sinewave(bufferFreq*1+osc2.sinewave(bufferFreq*changeThis)*osc3.sinewave(0.01)*1000);
+    //var wave = osc.sinewave(bufferFreq*osc2.sinewave(bufferFreq*1)*10);
+
+    // process wave
+    counter = counter + 200;
+
+    drawOutput[counter % 512] = wave;
+    return wave;
+
+  };
+
+  context.translate(0, 50);
+
+  function draw() {
+
+    context.rotate(0.0002);
+
+    context.clearRect(0, -50, width, height);
+
+    for (var i = 0; i < 512; i++) {
+      context.beginPath();
+
+      context.moveTo((width / 6) + (Math.cos(i * spacing) * size * drawOutput[i]), (height / 1.5) + (Math.sin(i * spacing) * size * drawOutput[i]));
+
+      context.lineTo((width / 3) + (Math.cos(i * spacing) * drawOutput[i]), (height / 30) + (Math.sin(i * 100) * drawOutput[i]));
+
+      context.stroke();
+
+      context.closePath();
+
+
+    }
+    //console.log(count/44100);
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+</script>
+
+</html>

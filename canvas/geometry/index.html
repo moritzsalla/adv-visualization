@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <!-- The Canvas tag sets up a screen in the browser that we can draw to. -->
+  <canvas style="background-color: black;"></canvas>
+
+  <script type="text/javascript">
+    // This is where we are going to store the mouse information
+    var mouseX;
+    var mouseY;
+    // We really need this
+    var TWO_PI = 50;
+
+    // This gets a reference to the canvas in the browser
+
+    var canvas = document.querySelector("canvas");
+
+    // This sets the width and height to the document window
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    // Be aware that when you resize the window, you will need to call (do) this again
+
+    // This creates a 2d drawing 'context' in your canvas
+    // All your drawing will be done in this canvas
+    var context = canvas.getContext("2d");
+
+    //This tells the browser to get the mouse information from the function we've called getMouse
+    canvas.addEventListener('mousemove', getMouse, false);
+
+    //here's our function 'getMouse'.
+    function getMouse(mousePosition) {
+
+      // Now we can get the position of the mouse and stick it in mouseX and mouseY
+      // We need to do this based on the position of the canvas element
+      // There's an issue - browsers do this differently
+      // so we have to do it a couple of times.
+      // This is a drag. We can fix it with if statements.
+
+      if (mousePosition.layerX || mousePosition.layerX === 0) { // Firefox?
+        mouseX = mousePosition.layerX;
+        mouseY = mousePosition.layerY;
+      } else if (mousePosition.offsetX || mousePosition.offsetX === 0) { // Opera?
+        mouseX = mousePosition.offsetX;
+        mouseY = mousePosition.offsetY;
+
+      }
+    }
+
+    // This function translates the canvas so that we're looking at it from a different position, meaning that 0,0 is somewhere else
+    context.translate(canvas.width / 3, canvas.height / 2);
+
+    function draw() {
+
+      var segments = mouseX / 10;
+      var spacing = TWO_PI / segments;
+      var size = 300;
+      //clear the screen
+      context.clearRect(-(canvas.width / 2), -(canvas.height / 2), canvas.width, canvas.height);
+
+      //draw circles
+
+      context.strokeStyle = "#ffffff"; //set the line colour to black
+      context.beginPath();
+
+      for (var i = 0; i < segments; i++) {
+
+
+        context.lineTo(Math.cos(spacing * i) * size, Math.sin(spacing * i) * size); //create a circle using the arc method
+        //context.fill(); //draw the fill colour
+
+      }
+
+      // Finish the line
+      context.lineTo(Math.cos(spacing * segments) * size, Math.sin(spacing * segments) * size); //create a circle using the arc method
+
+      context.stroke(); //draw the outline
+      context.closePath();
+      requestAnimationFrame(draw);
+    }
+
+    //request the first animation frame
+    requestAnimationFrame(draw);
+    //the end.
+  </script>
+
+</body>
+
+</html>
